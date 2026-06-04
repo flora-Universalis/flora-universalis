@@ -1,71 +1,307 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flora Universalis</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Flora Universalis | Landscaping & Horticulture Services in Hyderabad</title>
+
+  <!-- SEO META -->
+  <meta name="description" content="Flora Universalis offers professional landscaping, horticulture, plant sourcing, lawn development, and garden maintenance services in Hyderabad, Telangana.">
+  <meta name="keywords" content="landscaping Hyderabad, horticulture services Hyderabad, garden maintenance Moinabad, plant nursery Hyderabad, lawn development Telangana, Korean carpet lawn, fescue lawn, garden contractors Hyderabad">
+  <meta name="author" content="Flora Universalis">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://flora-universalis.github.io/flora-universalis/">
+
+  <!-- OPEN GRAPH (WhatsApp / Facebook preview) -->
+  <meta property="og:title" content="Flora Universalis | Landscaping & Horticulture Hyderabad">
+  <meta property="og:description" content="Professional landscaping, plant sourcing, lawn development & garden maintenance in Hyderabad.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://flora-universalis.github.io/flora-universalis/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735">
+
+  <!-- SCHEMA (Google Business Info) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Flora Universalis",
+    "image": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735",
+    "telephone": "+91 8297123312",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Moinabad",
+      "addressRegion": "Telangana",
+      "addressCountry": "IN"
+    },
+    "areaServed": "Hyderabad",
+    "description": "Horticulture, landscaping, plant sourcing and garden development services in Hyderabad.",
+    "url": "https://flora-universalis.github.io/flora-universalis/"
+  }
+  </script>
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f0fdf4; color: #333; }
-    header { background: #16a34a; color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; }
-    header h1 { margin: 0; }
-    .container { padding: 20px; }
-    .hero { text-align: center; margin: 40px 0; }
-    .hero h2 { font-size: 32px; }
-    .services { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-    .card { background: white; padding: 20px; border-radius: 12px; width: 250px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    .contact { background: white; padding: 20px; border-radius: 12px; margin-top: 40px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    footer { text-align: center; padding: 20px; font-size: 14px; color: #666; }
-    .btn { background: white; color: #16a34a; padding: 8px 15px; border-radius: 8px; text-decoration: none; font-weight: bold; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f3f7f3;
+      color: #1f2937;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 25px;
+      background: #0f3d2e;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 20px;
+    }
+
+    .nav-btn {
+      background: #22c55e;
+      padding: 8px 14px;
+      border-radius: 8px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 90px 20px;
+      background: linear-gradient(rgba(15, 61, 46, 0.85), rgba(15, 61, 46, 0.85)),
+        url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1500&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 750px;
+      margin: auto;
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    .location {
+      margin-top: 15px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .cta {
+      margin-top: 25px;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .primary {
+      background: #22c55e;
+      color: white;
+    }
+
+    .secondary {
+      background: white;
+      color: #0f3d2e;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 60px 0 20px;
+      font-size: 28px;
+      color: #0f3d2e;
+    }
+
+    .services,
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #16a34a;
+      margin-bottom: 10px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .contact {
+      background: white;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin-top: 15px;
+      background: #22c55e;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 14px 16px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
   </style>
 </head>
-<body><header>
-  <h1>🌿 Flora Universalis</h1>
-  <a href="#contact" class="btn">Contact</a>
-</header><div class="container">  <section class="hero">
-    <h2>Grow greenery. Grow happiness</h2>
-    <p>We grow, source, and supply high-quality plants for homes, gardens, landscaping and large-scale green Projects.</p>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>🌿 Flora Universalis</h1>
+    <a class="nav-btn" href="#contact">Contact</a>
+  </header>
+
+  <!-- HERO -->
   <section class="hero">
-  <h2>Professional Plant Sourcing & Landscaping Services</h2>
-  <p>Korean Carpet Lawn • Fescue Lawn • Large-Scale Green Projects</p>
+    <h1>Landscaping & Horticulture Services in Hyderabad</h1>
+    <p>
+      We provide professional plant sourcing, garden development, lawn installation,
+      and maintenance services for residential and commercial projects.
+    </p>
 
-  <div style="text-align:center;margin-top:20px;">
-    <img src="lawn.jpg" style="width:90%;max-width:300px;margin:10px;border-radius:12px;">
-    <img src="lawn-2.jpg" style="width:90%;max-width:300px;margin:10px;border-radius:12px;">
-    <img src="lawn-fix.jpg" style="width:90%;max-width:300px;margin:10px;border-radius:12px;">
-  </div>
+    <div class="location">
+      Serving Hyderabad • Moinabad • Telangana
+    </div>
 
-</section>
-  </section>  <section class="services">
+    <div class="cta">
+      <a class="primary" href="#contact">Get Free Quote</a>
+      <a class="secondary" href="https://wa.me/918297123312" target="_blank">WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <h2 class="section-title">Our Services</h2>
+
+  <section class="services">
+
     <div class="card">
-  <h3>Plant Sourcing</h3>
-  <p>We source high-quality plants from different regions across the country.</p>
-</div>
+      <h3>Plant Sourcing</h3>
+      <p>High-quality plants sourced from trusted nurseries across India.</p>
+    </div>
 
-<div class="card">
-  <h3>Landscaping Projects</h3>
-  <p>Execution of professional landscaping projects for residential, commercial, and large-scale spaces.</p>
-</div>
+    <div class="card">
+      <h3>Garden Development</h3>
+      <p>Complete execution of residential and commercial green spaces.</p>
+    </div>
 
-<div class="card">
-  <h3>Korean Carpet Lawn</h3>
-  <p>Supply and installation of premium Korean carpet grass for aesthetic and functional landscapes.</p>
-</div>
+    <div class="card">
+      <h3>Korean Carpet Lawn</h3>
+      <p>Premium carpet grass installation for instant green landscapes.</p>
+    </div>
 
-<div class="card">
-  <h3>Fescue Lawn Development</h3>
-  <p>Development of fescue (Fisco) lawns through stolon plantation, ideal for cricket grounds and expansive green areas.</p>
-</div>
-  <h3>Consultation</h3>
-  <p>Expert advice on plant care and nursery setup.</p>
-</div>
+    <div class="card">
+      <h3>Fescue Lawn Development</h3>
+      <p>Specialized lawns for sports grounds and large landscape areas.</p>
+    </div>
 
-  </section>  <section id="contact" class="contact">
-    <h3>Contact Us</h3>
+    <div class="card">
+      <h3>Consultation</h3>
+      <p>Expert guidance on plant care, nursery setup, and maintenance.</p>
+    </div>
+
+  </section>
+
+  <!-- GALLERY -->
+  <h2 class="section-title">Our Work</h2>
+
+  <section class="gallery">
+    <img src="lawn.jpg" />
+    <img src="lawn-2.jpg" />
+    <img src="lawn-fix.jpg" />
+    <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" />
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
     <p>📞 +91 8297123312</p>
     <p>📍 Moinabad, Telangana</p>
-  </section></div><footer>
-  © 2026 Flora Universalis. All rights reserved.
-</footer></body>
+
+    <a href="https://wa.me/918297123312" target="_blank">
+      Send WhatsApp Message
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Flora Universalis. All rights reserved.
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a class="whatsapp" href="https://wa.me/918297123312" target="_blank">
+    WhatsApp
+  </a>
+
+</body>
+
 </html>
-<a href="https://wa.me/918297123312" style="display:inline-block;margin-top:10px;background:#25D366;color:white;padding:10px 15px;border-radius:8px;text-decoration:none;">
-  Chat on WhatsApp
-</a>
